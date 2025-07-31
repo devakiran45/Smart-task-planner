@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Smart Task Planner – AI-Based Productivity Analyzer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A cross-platform smart task planner inspired by **Time Doctor 2**, designed to help you track tasks, analyze productivity, and manage time effectively.
 
-## Available Scripts
+## 🎯 Objective
 
-In the project directory, you can run:
+This project aims to build a comprehensive productivity ecosystem that goes beyond simple task management. It not only tracks and reminds users of their tasks but also analyzes actual user behavior and task execution by monitoring:
+- Tool/application usage.
+- Idle vs. active time.
+- Task-to-time alignment.
+- Geolocation-based task completion for physical activities.
+- Intelligent reports with productivity insights.
 
-### `npm start`
+## ⚙️ Key Modules & Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 💻 1. Technical Task Analyzer (Web-based Simulation)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This module, while a full desktop application is planned, is currently simulated within the web app to demonstrate its core functionality.
+- **Application & Window Tracking:** Logs apps and window titles to analyze focused vs. distracted time.
+- **Idle Time Detection:** Detects periods of inactivity.
+- **Productivity Scoring:** Provides a real-time productivity score based on simulated usage data.
 
-### `npm test`
+### 📱 2. Physical Task Tracker (Web-based Simulation)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Simulates the features of a mobile companion app for physical tasks.
+- **Geolocation Integration:** Allows you to use your current location to automatically fill in physical task locations.
+- **Task Completion:** Functionally demonstrates how a task could be marked as completed based on location data.
 
-### `npm run build`
+### ☁️ 3. Cloud Sync & Report Engine (Web-based Simulation)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This section of the web app acts as the user interface for a future cloud backend, visualizing analytics and reports.
+- **Dynamic Dashboards:** Displays real-time metrics, active tasks, and progress.
+- **Analytics & Reports:** Automatically updates and visualizes:
+  - Weekly Productivity Breakdown (Focused vs. Distracted)
+  - Tool Usage Distribution (Pie Chart)
+  - Focus Score Throughout the Day (Line Chart)
+- **Export Options:** Includes conceptual buttons for exporting reports to PDF, CSV, and JSON.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack (Current Frontend)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend:** React.js
+- **Styling:** CSS Modules
+- **Authentication:** Firebase (Authentication service)
+- **Routing:** React Router DOM
+- **Charts:** Recharts
+- **Mapping:** React Leaflet
 
-### `npm run eject`
+## 🚀 Setup Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/smart-task-planner-app.git](https://github.com/your-username/smart-task-planner-app.git)
+    cd smart-task-planner-app
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3.  **Set up Firebase Configuration:**
+    - Create a Firebase project and enable "Email/Password" authentication.
+    - Get your web app's config object.
+    - Replace the placeholder values in `src/firebase.js` with your actual config.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4.  **Run the application:**
+    ```bash
+    npm start
+    ```
 
-## Learn More
+## 📸 Screenshots & Demo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Dashboard
+![Dashboard Screenshot](images/dashboard.png)
+### Profile Page
+![Profile Page Screenshot](images/profile.png)
+### Task Page
+![Task page Screenshot](images/taskmanager.png.png)
+### Creating Technical Task
+![Technical Task Page Screenshot](images/newtask.png)
+### Physical Task
+![Physical Task Page Screenshot](images/physical%20task.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Settings Page
+![Settings Page Screenshot](images/settings.png)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📄 License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
